@@ -5,3 +5,5 @@ httpx
 pylint
 pytest
 mypy
+
+black
