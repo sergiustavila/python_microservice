@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://sergiustavila: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@github.com/sergiustavila/python_microservice.git'
+                git branch: 'develop', url : 'https://github.com/sergiustavila/python_microservice.git'
 
                 // Install dependecies
                 sh "sudo apt install software-properties-common && sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt update && sudo apt install python3.8"
