@@ -18,4 +18,4 @@ def test_read_data():
     response = client.get("/data/sergiu")
 
     assert response.status_code == 200
-    assert response.json() == {"message": "Hell on World Sergiu"}
+    assert response.json() == {"message": "Hello World sergiu"}

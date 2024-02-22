@@ -24,7 +24,7 @@ def connect_to_database():
 
         return rows  # Return the fetched data as a list of tuples
 
-    except (Exception, psycopg2.Error) as error:
+    except (psycopg2.Error) as error:
         print("Error while connecting to PostgreSQL:", error)
         return []  # Return an empty list in case of an error
 
@@ -37,7 +37,7 @@ def connect_to_database():
 @app.get("/")
 async def read_root():
     """Return service name"""
-    return {"service": "backend"}
+    return {"message": "Hello World!"}
 
 @app.get("/data")
 async def read_data():
