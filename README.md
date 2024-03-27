@@ -28,3 +28,6 @@ ssh -i ec2-key-name.pem  user@publicIP
 
 # Run ansible playbook
 ansible-playbook -i inventory.ini kube-dependencies.yml
+
+# Change connection of kubectl with another cluster
+aws eks update-kubeconfig --region eu-central-1 --name eks-jShnKZR8

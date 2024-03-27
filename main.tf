@@ -25,7 +25,7 @@ output "private_key" {
 }
 
 module "security_group" {
-  source = "./modules/security-group"
+  source = "./tf-modules/security-group"
 
   ssh_access_cidr = var.ssh_access_cidr
   web_access_cidr = var.web_access_cidr
@@ -33,13 +33,13 @@ module "security_group" {
 }
 
 module "key_pair" {
-  source = "./modules/key-pair"
+  source = "./tf-modules/key-pair"
 
   key_name = var.key_name
 }
 
 module "ec2_instance" {
-  source = "./modules/ec2"
+  source = "./tf-modules/ec2"
 
   instance_type      = var.instance_type
   ami_id             = var.ami_id
